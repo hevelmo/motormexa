@@ -1,0 +1,12 @@
+{% extends "super.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block section %}
+	<input type="hidden" name="section" id="section" value="home">
+{% endblock %}
+{#{% block content_current %}
+{% endblock %}#}
+{% block projects_container %}
+	{% embed "sitio/galeria.twig" %}{% endembed %}
+{% endblock %}
+{% block load_scripts %}
+{% endblock %}
