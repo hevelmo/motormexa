@@ -43,8 +43,8 @@
                 <link rel="stylesheet" href="{{ _host }}css/styles.css">
 				{#
                 <link rel="stylesheet" href="{{ _host }}css/styles.min.css">
+				<link rel="shortcut icon" href="{{ _host }}img/ico/favicon.ico">
                 #}
-				{#<link rel="shortcut icon" href="{{ _host }}img/ico/favicon.ico">#}
 			{% endblock %}
 			<!--[if lt IE 9]>
 				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -90,14 +90,15 @@
 				    }
 				</script>
             {% endblock %}
-            <script src="{{ _host }}lib/assets/modernizr.js"></script> {# Modernizr #}
+            <script src="{{ _host }}lib/assets/modernizr{{ _pro }}.js"></script> {# Modernizr #}
 		</head>
 		<body id="index">
 			{% block section %}
 			{% endblock %}
 			<div class="projects-container">
-				{% block projects_container %}
-					
+				{#{% block projects_container %}
+				{% endblock %}#}					
+				{% block content_current %}
 				{% endblock %}
 			</div> {# .project-container #}
 	        {% block body_scripts %}

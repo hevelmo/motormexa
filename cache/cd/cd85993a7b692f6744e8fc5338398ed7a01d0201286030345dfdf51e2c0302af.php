@@ -16,7 +16,7 @@ class __TwigTemplate_a7ff9a5cef2386457cf0e7959ab2540ae85827ab284edbff819a73eba34
             'links' => array($this, 'block_links'),
             'head_scripts' => array($this, 'block_head_scripts'),
             'section' => array($this, 'block_section'),
-            'projects_container' => array($this, 'block_projects_container'),
+            'content_current' => array($this, 'block_content_current'),
             'body_scripts' => array($this, 'block_body_scripts'),
             'load_scripts' => array($this, 'block_load_scripts'),
         );
@@ -55,7 +55,9 @@ class __TwigTemplate_a7ff9a5cef2386457cf0e7959ab2540ae85827ab284edbff819a73eba34
         // line 93
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
-        echo "lib/assets/modernizr.js\"></script> ";
+        echo "lib/assets/modernizr";
+        echo twig_escape_filter($this->env, (isset($context["_pro"]) ? $context["_pro"] : null), "html", null, true);
+        echo ".js\"></script> ";
         // line 94
         echo "\t\t</head>
 \t\t<body id=\"index\">
@@ -65,17 +67,20 @@ class __TwigTemplate_a7ff9a5cef2386457cf0e7959ab2540ae85827ab284edbff819a73eba34
         // line 98
         echo "\t\t\t<div class=\"projects-container\">
 \t\t\t\t";
-        // line 99
-        $this->displayBlock('projects_container', $context, $blocks);
-        // line 102
-        echo "\t\t\t</div> ";
+        // line 100
+        echo "\t\t\t\t\t
+\t\t\t\t";
+        // line 101
+        $this->displayBlock('content_current', $context, $blocks);
         // line 103
+        echo "\t\t\t</div> ";
+        // line 104
         echo "\t        ";
         $this->displayBlock('body_scripts', $context, $blocks);
-        // line 116
+        // line 117
         echo "\t        
 \t        <script>";
-        // line 117
+        // line 118
         $this->displayBlock('load_scripts', $context, $blocks);
         echo "</script>
 \t\t</body>
@@ -170,8 +175,6 @@ class __TwigTemplate_a7ff9a5cef2386457cf0e7959ab2540ae85827ab284edbff819a73eba34
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "css/styles.css\">
 \t\t\t\t";
-        // line 47
-        echo "\t\t\t\t";
         // line 48
         echo "\t\t\t";
     }
@@ -229,50 +232,49 @@ class __TwigTemplate_a7ff9a5cef2386457cf0e7959ab2540ae85827ab284edbff819a73eba34
         echo "\t\t\t";
     }
 
-    // line 99
-    public function block_projects_container($context, array $blocks = array())
+    // line 101
+    public function block_content_current($context, array $blocks = array())
     {
-        // line 100
-        echo "\t\t\t\t\t
-\t\t\t\t";
+        // line 102
+        echo "\t\t\t\t";
     }
 
-    // line 103
+    // line 104
     public function block_body_scripts($context, array $blocks = array())
     {
-        // line 104
-        echo "\t            ";
         // line 105
+        echo "\t            ";
+        // line 106
         echo "\t            <script src=\"";
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "lib/min/core.lib.min.js\"></script>
 \t            ";
-        // line 107
+        // line 108
         echo "\t            ";
-        // line 111
+        // line 112
         echo "\t            <script src=\"";
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "js/main.js\"></script>
 \t\t\t\t<script src=\"";
-        // line 112
+        // line 113
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "js/method.js\"></script>
 \t\t\t\t<script src=\"";
-        // line 113
+        // line 114
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "js/model.js\"></script>
 \t\t\t\t<script src=\"";
-        // line 114
+        // line 115
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "js/objects.js\"></script>
 \t            <script src=\"";
-        // line 115
+        // line 116
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "js/required.js\"></script>
 \t        ";
     }
 
-    // line 117
+    // line 118
     public function block_load_scripts($context, array $blocks = array())
     {
     }
@@ -289,7 +291,7 @@ class __TwigTemplate_a7ff9a5cef2386457cf0e7959ab2540ae85827ab284edbff819a73eba34
 
     public function getDebugInfo()
     {
-        return array (  276 => 117,  270 => 115,  266 => 114,  262 => 113,  258 => 112,  253 => 111,  251 => 107,  246 => 105,  244 => 104,  241 => 103,  236 => 100,  233 => 99,  229 => 97,  226 => 96,  183 => 53,  180 => 52,  176 => 48,  174 => 47,  169 => 43,  166 => 42,  162 => 40,  159 => 39,  153 => 35,  149 => 34,  145 => 33,  141 => 32,  136 => 30,  133 => 29,  130 => 28,  126 => 37,  124 => 28,  120 => 27,  116 => 26,  110 => 23,  104 => 20,  97 => 16,  89 => 10,  86 => 9,  79 => 117,  76 => 116,  73 => 103,  71 => 102,  69 => 99,  66 => 98,  64 => 96,  60 => 94,  56 => 93,  54 => 52,  49 => 49,  47 => 42,  44 => 41,  42 => 39,  39 => 38,  37 => 9,  28 => 2,);
+        return array (  278 => 118,  272 => 116,  268 => 115,  264 => 114,  260 => 113,  255 => 112,  253 => 108,  248 => 106,  246 => 105,  243 => 104,  239 => 102,  236 => 101,  232 => 97,  229 => 96,  186 => 53,  183 => 52,  179 => 48,  174 => 43,  171 => 42,  167 => 40,  164 => 39,  158 => 35,  154 => 34,  150 => 33,  146 => 32,  141 => 30,  138 => 29,  135 => 28,  131 => 37,  129 => 28,  125 => 27,  121 => 26,  115 => 23,  109 => 20,  102 => 16,  94 => 10,  91 => 9,  84 => 118,  81 => 117,  78 => 104,  76 => 103,  74 => 101,  71 => 100,  68 => 98,  66 => 96,  62 => 94,  56 => 93,  54 => 52,  49 => 49,  47 => 42,  44 => 41,  42 => 39,  39 => 38,  37 => 9,  28 => 2,);
     }
 }
 /* {#{% spaceless %} #}*/
@@ -337,8 +339,8 @@ class __TwigTemplate_a7ff9a5cef2386457cf0e7959ab2540ae85827ab284edbff819a73eba34
 /*                 <link rel="stylesheet" href="{{ _host }}css/styles.css">*/
 /* 				{#*/
 /*                 <link rel="stylesheet" href="{{ _host }}css/styles.min.css">*/
+/* 				<link rel="shortcut icon" href="{{ _host }}img/ico/favicon.ico">*/
 /*                 #}*/
-/* 				{#<link rel="shortcut icon" href="{{ _host }}img/ico/favicon.ico">#}*/
 /* 			{% endblock %}*/
 /* 			<!--[if lt IE 9]>*/
 /* 				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>*/
@@ -384,14 +386,15 @@ class __TwigTemplate_a7ff9a5cef2386457cf0e7959ab2540ae85827ab284edbff819a73eba34
 /* 				    }*/
 /* 				</script>*/
 /*             {% endblock %}*/
-/*             <script src="{{ _host }}lib/assets/modernizr.js"></script> {# Modernizr #}*/
+/*             <script src="{{ _host }}lib/assets/modernizr{{ _pro }}.js"></script> {# Modernizr #}*/
 /* 		</head>*/
 /* 		<body id="index">*/
 /* 			{% block section %}*/
 /* 			{% endblock %}*/
 /* 			<div class="projects-container">*/
-/* 				{% block projects_container %}*/
-/* 					*/
+/* 				{#{% block projects_container %}*/
+/* 				{% endblock %}#}					*/
+/* 				{% block content_current %}*/
 /* 				{% endblock %}*/
 /* 			</div> {# .project-container #}*/
 /* 	        {% block body_scripts %}*/

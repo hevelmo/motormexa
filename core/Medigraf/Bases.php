@@ -22,6 +22,7 @@ class Bases
             "_host" => _HOST,
             "_max" => _MAX,
             "_loc" => _LOC,
+            "_pro" => _PRO,
             "_anio" => date("o")
         );
     }

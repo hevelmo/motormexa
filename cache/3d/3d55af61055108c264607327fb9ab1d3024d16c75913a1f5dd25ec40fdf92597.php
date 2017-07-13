@@ -12,7 +12,7 @@ class __TwigTemplate_4dbeb44dc7e573b702aa8de975e023721e3deb22a762fd7183b12bcb820
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'section' => array($this, 'block_section'),
-            'projects_container' => array($this, 'block_projects_container'),
+            'content_current' => array($this, 'block_content_current'),
             'load_scripts' => array($this, 'block_load_scripts'),
         );
     }
@@ -41,15 +41,15 @@ class __TwigTemplate_4dbeb44dc7e573b702aa8de975e023721e3deb22a762fd7183b12bcb820
 ";
     }
 
-    // line 8
-    public function block_projects_container($context, array $blocks = array())
+    // line 6
+    public function block_content_current($context, array $blocks = array())
     {
-        // line 9
+        // line 7
         echo "\t";
-        $this->loadTemplate("home/_home.twig", "home/_home.twig", 9, "1248206306")->display($context);
+        $this->loadTemplate("home/_home.twig", "home/_home.twig", 7, "641683682")->display($context);
     }
 
-    // line 11
+    // line 14
     public function block_load_scripts($context, array $blocks = array())
     {
     }
@@ -66,27 +66,27 @@ class __TwigTemplate_4dbeb44dc7e573b702aa8de975e023721e3deb22a762fd7183b12bcb820
 
     public function getDebugInfo()
     {
-        return array (  53 => 11,  48 => 9,  45 => 8,  40 => 4,  37 => 3,  31 => 2,  11 => 1,);
+        return array (  53 => 14,  48 => 7,  45 => 6,  40 => 4,  37 => 3,  31 => 2,  11 => 1,);
     }
 }
 
 
 /* home/_home.twig */
-class __TwigTemplate_4dbeb44dc7e573b702aa8de975e023721e3deb22a762fd7183b12bcb82027231_1248206306 extends Twig_Template
+class __TwigTemplate_4dbeb44dc7e573b702aa8de975e023721e3deb22a762fd7183b12bcb82027231_641683682 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
-        // line 9
-        $this->parent = $this->loadTemplate("sitio/galeria.twig", "home/_home.twig", 9);
+        // line 7
+        $this->parent = $this->loadTemplate("home/container.twig", "home/_home.twig", 7);
         $this->blocks = array(
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "sitio/galeria.twig";
+        return "home/container.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -106,7 +106,7 @@ class __TwigTemplate_4dbeb44dc7e573b702aa8de975e023721e3deb22a762fd7183b12bcb820
 
     public function getDebugInfo()
     {
-        return array (  82 => 9,  53 => 11,  48 => 9,  45 => 8,  40 => 4,  37 => 3,  31 => 2,  11 => 1,);
+        return array (  82 => 7,  53 => 14,  48 => 7,  45 => 6,  40 => 4,  37 => 3,  31 => 2,  11 => 1,);
     }
 }
 /* {% extends "super.twig" %}*/
@@ -114,10 +114,13 @@ class __TwigTemplate_4dbeb44dc7e573b702aa8de975e023721e3deb22a762fd7183b12bcb820
 /* {% block section %}*/
 /* 	<input type="hidden" name="section" id="section" value="home">*/
 /* {% endblock %}*/
-/* {#{% block content_current %}*/
-/* {% endblock %}#}*/
+/* {% block content_current %}*/
+/* 	{% embed "home/container.twig" %}{% endembed %}*/
+/* {% endblock %}*/
+/* {#*/
 /* {% block projects_container %}*/
 /* 	{% embed "sitio/galeria.twig" %}{% endembed %}*/
 /* {% endblock %}*/
+/* #}*/
 /* {% block load_scripts %}*/
 /* {% endblock %}*/

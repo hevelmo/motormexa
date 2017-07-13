@@ -3,10 +3,13 @@
 {% block section %}
 	<input type="hidden" name="section" id="section" value="home">
 {% endblock %}
-{#{% block content_current %}
-{% endblock %}#}
+{% block content_current %}
+	{% embed "home/container.twig" %}{% endembed %}
+{% endblock %}
+{#
 {% block projects_container %}
 	{% embed "sitio/galeria.twig" %}{% endembed %}
 {% endblock %}
+#}
 {% block load_scripts %}
 {% endblock %}
